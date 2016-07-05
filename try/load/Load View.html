@@ -1,0 +1,60 @@
+<html>
+	<head>
+		<title>Load View</title>
+		<style>
+        button{
+        width:150px;
+        height:35px;
+        font-size:25;
+        margin:10px;
+        border-color:#A7ECEC;
+        border-radius:5px;
+        background-color:#8CF9F9;
+        }
+        button:focus{
+        outline:0;
+        }
+        
+        div{
+        margin:0 auto;
+        display:table;
+        }
+        div:nth-child(4){
+        display:block;
+        margin-top:50px;
+        }
+        
+		</style>
+        <link rel="stylesheet" href="./load.css">
+        
+		<script src="../jquery.js" type="text/javascript"></script>
+            
+		<script type="text/javascript">
+        $(document).ready(function(){
+            $('button').click(function(){
+                $('div').eq(3).removeClass();
+                $('div').eq(3).addClass('load'+$(this).attr('value'));
+            });
+            $('button').eq(8).click(function(){
+                $('div').eq(3).removeClass();
+            });
+        });
+        
+		</script>
+	</head>
+	<body>
+    <div>
+    <button value='1'>NO.1</button>
+    <button value='2'>NO.2</button>
+    <button value='3'>NO.3</button></div>
+    <div>
+    <button value='4'>NO.4</button>
+    <button value='5'>NO.5</button>
+    <button value='6'>NO.6</button></div>
+    <div>
+    <button value='7'>NO.7</button>
+    <button value='8'>NO.8</button>
+    <button value=''>reset</button></div>
+    <div></div>
+	</body>
+</html>
